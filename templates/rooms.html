@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+<h2>Rooms</h2>
+
+<table>
+<tr>
+<th>Room ID</th>
+<th>Type</th>
+<th>Price</th>
+<th>Status</th>
+</tr>
+
+{% for r in rooms %}
+<tr>
+<td>{{ r[0] }}</td>
+<td>{{ r[1] }}</td>
+<td>{{ r[2] }}</td>
+<td>{{ r[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+{% endblock %}

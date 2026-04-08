@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+<h2>Check-out</h2>
+
+<form method="post">
+<select name="guest_id">
+{% for g in guests %}
+<option value="{{ g[0] }}">
+Guest ID: {{ g[0] }} | {{ g[1] }} | Room {{ g[3] }}
+</option>
+{% endfor %}
+</select>
+
+<button>Checkout</button>
+</form>
+
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+<h2>Check-in</h2>
+
+<form method="post">
+<input name="name" placeholder="Guest Name" required>
+<input name="phone" placeholder="Phone" required>
+
+<select name="room_id">
+{% for r in rooms %}
+<option value="{{ r[0] }}">
+Room ID: {{ r[0] }} | {{ r[1] }} | ₹{{ r[2] }}
+</option>
+{% endfor %}
+</select>
+
+<button>Check-in</button>
+</form>
+
+</div>
+{% endblock %}

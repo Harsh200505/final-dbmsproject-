@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Hotel Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Rooms</h3>
+<p>{{ total_rooms }}</p>
+</div>
+
+<div class="card">
+<h3>Available</h3>
+<p>{{ available }}</p>
+</div>
+
+<div class="card">
+<h3>Occupied</h3>
+<p>{{ occupied }}</p>
+</div>
+
+</div>
+
+<div class="card">
+<h2>Recent Guests</h2>
+
+<table>
+<tr>
+<th>Guest ID</th>
+<th>Name</th>
+<th>Room</th>
+<th>Check-in</th>
+</tr>
+
+{% for g in guests %}
+<tr>
+<td>{{ g[0] }}</td>
+<td>{{ g[1] }}</td>
+<td>{{ g[3] }}</td>
+<td>{{ g[4] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+</div>
+
+{% endblock %}
