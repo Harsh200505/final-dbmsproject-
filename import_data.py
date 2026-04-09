@@ -1,7 +1,7 @@
 import sqlite3
 import csv
 
-conn = sqlite3.connect('database.db')
+conn = sqlite3.connect('hotel.db')
 cursor = conn.cursor()
 
 print("Starting import...")

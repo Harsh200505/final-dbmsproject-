@@ -5,7 +5,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 def get_db():
-    return sqlite3.connect("database.db")
+    return sqlite3.connect("hotel.db")
 
 # DASHBOARD
 @app.route('/')
